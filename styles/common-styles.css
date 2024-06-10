@@ -629,5 +629,9 @@ textarea {
         text-align: center;
     }
 
+    .row {
+        justify-content: center;
+    }
+
 }
 
