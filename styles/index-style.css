@@ -1,0 +1,384 @@
+
+/* HERO SECTION */
+
+section.hero {
+    height: 370px;
+    background-image: url("../images/bg-image_WILL5.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+}
+   
+ /* .background-image-hoverlay {
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+} */
+
+.call-to-action-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5em;
+
+    width: 20vw;
+    margin-left: 25vw;
+    margin-top: -2em;
+    text-align: right;
+}
+
+.call-to-action-section h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.call-to-action-section p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.call-to-action-section button {
+    width: 10vw;
+    font-size: 20px;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+/* ABOUT ME SECTION */
+
+section.about-me-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.about-me-section figure {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    
+    gap: 10em;
+}
+
+section.about-me-section img {
+    height: 25em;
+    width: auto;
+}
+
+section.about-me-section figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+section.about-me-section p {
+    font-size: 18px;
+    width: 40vw;
+    line-height: 1.5em;
+}
+
+/* Work fields */
+
+section.work-fields-section {
+    position: relative;
+    z-index: 9;
+
+    margin-top: -15px;
+}
+
+section.work-fields-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #BECFB8;
+}
+
+section.work-fields {
+    padding: 1em 3vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+article.work-field {
+    width: 30vw;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+}
+
+article.work-field p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+article.work-field .work-field-icon {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: #305852;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article.work-field .work-field-icon img {
+    width: 2em;
+    height: auto;
+}
+
+/* Services */
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em 0;
+}
+
+section.services-section p {
+    width: 60vw;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.services-container {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+article.service {
+    height: 23em;
+    width: 23em;
+    padding: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    background-color: #D5D1C4;
+    border-radius: 1em;
+}
+
+article.service span.subtitle {
+    color: #1C2823;
+    font-size: 14px;
+}
+
+article.service span.details {
+    color: #1C2823;
+    font-size: 12px;
+    font-family: 'Roboto LightItalic', sans-serif;
+}
+
+article.service img {
+    width: 6em;
+    height: auto;
+}
+
+article.service button {
+    margin-top: 0;
+}
+
+/* Contact me */
+
+.contact-me-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.contact-me-form {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RESPONSIVE BEHAVIOURS */
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+
+    section.call-to-action-section {
+        width: 35vw;
+        margin-left: 15vw;
+    }
+
+    section.call-to-action-section button {
+        width: 20vw;
+    }
+
+    section.about-me-section figure {
+        gap: 0em;
+    }
+
+    section.about-me-section p {
+        width: 70vw;
+        text-align: center;
+    }
+
+    section.about-me-section figcaption {
+        align-items: center;
+    }
+
+    section.about-me-section img {
+        height: 35vw;
+    }
+
+    section.work-fields {
+        justify-content: center;
+    }
+
+    article.work-field {
+        width: 45vw;
+    }
+
+    section.services-container { 
+        gap: 3em;
+    }
+
+    /* Layout */
+    
+    .row {
+        justify-content: center;
+    }
+
+    /* CONTACT ME SECTION */
+
+    textarea {
+        width: 52em;
+    }
+
+    .contact-me-form {
+        width: 100vw;
+    }
+
+    footer .footer-content {
+        justify-content: space-around;
+    }
+
+    .footer-content section.logo-info {
+        width: 100vw;
+    }
+
+    .about-me-info, .social-info, .maps-info {
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    section.hero {
+        height: 600px;
+        background-image: url('../images/bg_SM.png');
+        justify-content: center;
+    }
+
+    .call-to-action-section {
+        width: 75vw;
+        margin-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .call-to-action-section h1 {
+        font-size: 30px;
+    }
+
+    .call-to-action-section p {
+        font-size: 18px;
+    }
+
+    .call-to-action-section button {
+        width: 40vw;
+    }
+
+    section.about-me-section {
+        padding-top: 3em;
+    }
+
+    section.about-me-section figure {
+        gap: 0;
+    }
+
+    section.about-me-section h2, section.about-me-section p {
+        text-align: center;
+    }
+
+    section.about-me-section img {
+        width: 75vw;
+        height: auto;
+    }
+
+    .services-container {
+        gap: 1.5em;
+    }
+
+    section.about-me-section p {
+        width: 85vw;
+    }
+
+    section.work-fields {
+        justify-content: center;
+        gap: 3em;
+    }
+
+    article.work-field {
+        width: 80vw;
+    }
+
+    section.services-section {
+        padding: 3em 0;
+    }
+
+    section.services-section p {
+        width: 80vw;
+    }
+
+    section.contact-me-section p {
+        width: 85vw;
+    }
+
+    .logo-info {
+        width: 100%;
+    }
+    
+    .about-me-info, .social-info, .maps-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* BUTTONS */
+
+    .mobile-big-btn {
+        width: 25vw;
+    }
+
+    /* CONTACT ME SECTION */
+    textarea {
+        width: 25em;
+    }
+
+}

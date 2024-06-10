@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logopedista Arianna Vallet</title>
+
+    <link rel="stylesheet" href="./styles/common-styles.css" class="rel" />
+    <link rel="stylesheet" href="./styles/index-style.css" class="rel" />
+
+    <script
+      src="https://kit.fontawesome.com/a332e3b351.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/common-scripts.js" defer></script>
+    <script src="./scripts/banner.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+
+      <!-- BURGER MENU -->
+      <div class="mobile-menu-section mobile-only">
+        <i
+          class="fa-solid fa-bars fa-2xl burger-menu"
+          style="color: #fff"
+          onclick="openNav()"
+        ></i>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="myNav" class="overlay mobile-only">
+        <!-- Button to close the overlay navigation -->
+        <i
+          class="fa-solid fa-x fa-2xl closebtn"
+          style="color: #fff"
+          onclick="closeNav()"
+        ></i>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="#" onclick="scrollToAnchor('about-me')">Riguardo me</a>
+          <a href="#" onclick="scrollToAnchor('work-fields')"
+            >Di cosa mi occupo</a
+          >
+          <a href="#" onclick="scrollToAnchor('services')">Pacchetti</a>
+          <a href="#" onclick="scrollToAnchor('contacts')">Contatti</a>
+        </div>
+      </div>
+
+      <section class="header-contacts dekstop-only">
+        <span class="header-phone-contact">
+          <i class="fas fa-phone" style="color: #305852"></i>
+          +39 3281339667
+        </span>
+        <div class="rounded-square">
+          <i class="fa-brands fa-instagram" style="color: #fff"></i>
+        </div>
+        <a class="rounded-square" href="https://www.linkedin.com/in/arianna-vallet-1665b9220" target="_blank">
+          <i class="fa-brands fa-linkedin-in" style="color: #fff"></i>
+        </a>
+      </section>
+
+      <section class="header-logo">
+        <img src="./images/logo.svg" alt="" />
+      </section>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#about-me"> Riguardo me </a>
+          </li>
+          <li>
+            <a href="#work-fields"> Di cosa mi occupo </a>
+          </li>
+          <li>
+            <a href="#services"> Prestazioni più richieste </a>
+          </li>
+          <li>
+            <a href="#contacts"> Contatti </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <section class="call-to-action-section">
+          <h1>Terapia del Linguaggio per tutti</h1>
+
+          <p>
+            Logopedia per bambini, adulti, trattamento di disturbi
+            dell'apprendimento
+          </p>
+
+          <button class="primary-btn"><span>Contattami</span></button>
+        </section>
+      </section>
+
+      <!-- ABOUT ME -->
+      <section class="about-me-section" id="about-me">
+        <figure>
+          <img src="./images/photo.png" alt="" />
+          <figcaption>
+            <h2>Riguardo me</h2>
+            <p>
+              Mi chiamo Arianna Vallet e sono una Logopedista. Sono nata e
+              cresciuta ad Aosta e ho conseguito la laurea in Logopedia con lode
+              presso l'Università degli Studi di Torino, città nella quale ho
+              maturato esperienza clinica nella gestione logopedica
+              ambulatoriale e domiciliare di bambini, adulti e anziani. Sono
+              formata con metodo PROMPT© e specializzata nella presa in carico
+              di persone con disturbi motori del linguaggio e disturbi evolutivi
+              complessi. Continuo annualmente la mia formazione con corsi di
+              aggiornamento al fine di garantire sempre un valido supporto alle
+              persone che si rivolgono a me
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- DI COSA MI OCCUPO -->
+      <section class="work-fields-section" id="work-fields">
+        <section class="curved-top-border"></section>
+
+        <section class="work-fields-container">
+          <h2>Di cosa mi occupo</h2>
+
+          <section class="animate-element work-fields">
+            <article class="work-field animate-element">
+              <div class="work-field-icon">
+                <img src="./images/chat.png" alt="" />
+              </div>
+              <h3>LINGUAGGIO e COMUNICAZIONE</h3>
+              <p>
+                Ritardo/disturbo specifico o aspecifico del linguaggio,
+                disprassia verbale, disfluenze, afasia
+              </p>
+            </article>
+
+            <article class="work-field animate-element">
+              <div class="work-field-icon">
+                <img src="./images/idea.png" alt="" />
+              </div>
+              <h3>APPRENDIMENTO e FUNZIONI ESECUTIVE</h3>
+              <p>
+                Difficoltà scolastiche, disturbi specifici (DSA) e non
+                dell'apprendimento, disturbi dell'attenzione e della memoria
+              </p>
+            </article>
+
+            <article class="work-field animate-element">
+              <div class="work-field-icon">
+                <img src="./images/puzzle.png" alt="" />
+              </div>
+              <h3>DISTURBI DELLO SPETTRO AUTISTICO e CAA</h3>
+              <p>
+                Condizioni dalla sintomatologia eterogenea i disturbi dello
+                spettro autistico possono coinvolgere a 360° la persona e la sua
+                famiglia
+              </p>
+            </article>
+
+            <article class="work-field animate-element">
+              <div class="work-field-icon">
+                <img src="./images/throat_white.png" alt="" />
+              </div>
+
+              <div class="d-flex">
+                <h3>DEGLUTIZIONE e FUNZIONI ORALI</h3>
+
+                <div class="icon-container">
+                  <i
+                    class="fa-solid fa-circle-question fa-lg"
+                    style="color: #305852"
+                  ></i>
+                  <div class="tooltip">
+                    Nel bambino respirazione orale, squilibrio muscolare
+                    orofacciale, deglutizione atipica o disfunzionale,
+                    malocclusioni dentarie e difficoltà masticatorie sono
+                    strettamente collegate
+                  </div>
+                </div>
+              </div>
+              <p>Deglutizione atipica, disfagia</p>
+            </article>
+
+            <article class="work-field animate-element">
+              <div class="work-field-icon">
+                <img src="./images/voice.png" alt="" />
+              </div>
+
+              <div class="d-flex">
+                <h3>VOCE</h3>
+
+                <div class="icon-container">
+                  <i
+                    class="fa-solid fa-circle-question fa-lg"
+                    style="color: #305852"
+                  ></i>
+                  <div class="tooltip">
+                    Per cause organiche o funzionali è possibile che la persona
+                    manifesti difficoltà nell'emissione della voce: raucedine,
+                    afonia, instabilità della voce, affaticabilità nel parlare o
+                    nel cantare
+                  </div>
+                </div>
+              </div>
+              <p>Disfonie.</p>
+            </article>
+
+            <article class="work-field animate-element">
+              <div class="work-field-icon">
+                <img src="./images/online-chat.png" alt="" />
+              </div>
+              <h3>CONSULENZE (ANCHE ONLINE)</h3>
+              <p>
+                Lo spazio ideale per le persone o famiglie che necessitano di
+                informazioni o chiarimenti, di condividere dubbi o
+                preoccupazioni circa una situazione di interesse logopedico e
+                ricevere le primissime indicazioni dello specialista
+              </p>
+            </article>
+          </section>
+        </section>
+
+        <section class="curved-bottom-border"></section>
+      </section>
+
+      <!-- SERVICES (Pacchetti) -->
+      <section class="animate-element services-section" id="services">
+        <h2> Prestazioni più richieste </h2>
+        <p>
+          Lorem Ipsum è un testo segnaposto utilizzato nel settore della
+          tipografia e della stampa. Lorem Ipsum è considerato il testo
+          segnaposto standard sin
+        </p>
+
+        <section class="services-container">
+          <article class="service animate-element">
+            <img src="./images/dsa.png" alt="PACCHETTO DSA" />
+            <h3>PACCHETTO DSA</h3>
+            <span class="subtitle">
+              Valutazione o rivalutazione logopedica degli apprendimenti
+              scolastici per DSA o sospetti DSA validabile presso l'ASL
+            </span>
+            <span class="details"
+              >Valutazione logopedica della deglutizione + stesura della
+              relazione
+            </span>
+            <button class="primary-btn">Scopri</button>
+          </article>
+
+          <article class="service animate-element">
+            <img src="./images/throat.png" alt="PACCHETTO DISFAGIA" />
+            <h3>PACCHETTO DISFAGIA</h3>
+            <span class="subtitle">
+              Valutazione della dinamica deglutitoria con le diverse consistenze
+              ed eventuale indicazione di compensi dietetici, posturali e
+              comportamentali
+            </span>
+            <span class="details">
+              Valutazione logopedica della deglutizione + stesura della
+              relazione
+            </span>
+            <button class="primary-btn">Scopri</button>
+          </article>
+
+          <article class="service animate-element">
+            <img src="./images/personalized.png" alt="PACCHETTO SU MISURA" />
+            <h3>TERAPIA DOMICILIARE</h3>
+            <span class="subtitle">
+              Valutazione o rivalutazione logopedica degli apprendimenti
+              scolastici per DSA o sospetti DSA validabile presso l'ASL
+            </span>
+            <span class="details"
+              >Tutte le sedute per la somministrazione dei test + stesura della
+              relazione + colloquio restitutivo con la famiglia
+            </span>
+            <button class="primary-btn">Scopri</button>
+          </article>
+        </section>
+      </section>
+
+      <!-- CONTACT ME -->
+      <section class="animate-element contact-me-section" id="contacts">
+        <h2>Contattami</h2>
+        <p>Compila il seguente form con i tuoi dati e sarai ricontattato</p>
+
+        <form
+          class="contact-me-form gap"
+          action="./scripts/send_email.php"
+          method="post"
+        >
+          <div class="row gap">
+            <div class="text-input">
+              <span>Nome</span>
+              <input type="text" name="nome" required />
+            </div>
+
+            <div class="text-input">
+              <span>Cognome</span>
+              <input type="text" name="cognome" required />
+            </div>
+          </div>
+          <div class="row gap">
+            <div class="text-input">
+              <span>Città</span>
+              <input type="text" name="citta" required />
+            </div>
+            <div class="text-input">
+              <span>Indirizzo</span>
+              <input type="text" name="indirizzo" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="text-input">
+              <span>Di cosa avresti bisogno?</span>
+              <textarea name="richiesta" required></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <input type="checkbox" id="consenso" name="consenso" required />
+            <label for="consenso" style="font-size: 14px">
+              Accetto la <a href="#" class="href">politica sulla privacy</a>
+            </label>
+          </div>
+
+          <div class="row contact-btn-row gap">
+            <button class="primary-btn mobile-big-btn" type="submit">
+              Invia
+            </button>
+            <button class="tertiary-btn mobile-big-btn">Pulisci</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <section class="curved-top-border"></section>
+      <section class="footer-content">
+        <section class="logo-info">
+          <section class="logo">
+            <i class="fa-solid fa-leaf fa-3x" style="color: #305852"></i>
+            <h1>DOTT.SA ARIANNA VALLET</h1>
+
+            <span style="text-align: center">
+              Lorem Ipsum è un testo segnaposto utilizzato nel settore della
+              tipografia.
+            </span>
+          </section>
+        </section>
+
+        <section class="about-me-info">
+          <h2>Riguardo me</h2>
+          <ul>
+            <li><span>P.IVA. : 12345678912</span></li>
+            <li><span>N.ro di Iscrizione all’albo: 12345678912</span></li>
+          </ul>
+        </section>
+
+        <section class="social-info">
+          <h2>Contatti & Social</h2>
+          <ul>
+            <li>
+              <i class="fas fa-phone" style="color: #305852"></i>
+              <span>+39 3281339667</span>
+            </li>
+            <li>
+              <i
+                class="fa-brands fa-square-whatsapp"
+                style="color: #305852"
+              ></i>
+              <span>Disponibile su whatsapp</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope" style="color: #305852"></i>
+              <span>ariannavallet@gmail.com</span>
+            </li>
+            <li>
+              <i class="fa-brands fa-linkedin" style="color: #305852"></i>
+              <span>linkedIn/arianna-vignet</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="maps-info">
+          <h2>Dove mi trovo</h2>
+          <span>Aosta (AO)</span>
+          <iframe
+            id="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22274.913549845263!2d7.295035158990498!3d45.74384424136942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478920b73eb6afb7%3A0x6749e443ee2610!2s11100%20Aosta%20AO%2C%20Italia!5e0!3m2!1sit!2snl!4v1718021764695!5m2!1sit!2snl"
+            frameborder="0"
+            style="border: 0; border-radius: 0.5em; margin-top: 0.3em"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
+      </section>
+
+      <section class="copyright">
+        <span
+          >© Copyright 2024. <strong>Alessandro Mancuso</strong> Tutti i diritti
+          riservati.</span
+        >
+      </section>
+    </footer>
+
+    <!-- BANNER GDPR -->
+    <div id="banner-privacy">
+      <p>
+        Questo sito utilizza i cookie per migliorare l'esperienza dell'utente.
+        Continuando la navigazione, acconsenti all'uso dei cookie in conformità
+        con la nostra <a href="#">politica sulla privacy</a>.
+      </p>
+
+      <div id="banner-buttons">
+        <button class="primary-btn accept-privacy-btn">Accetta</button>
+        <button class="tertiary-btn reject">Rifiuta</button>
+      </div>
+    </div>
+  </body>
+</html>
