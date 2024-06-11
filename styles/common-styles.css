@@ -178,7 +178,8 @@ nav a {
   }
   
   .overlay a {
-    padding: 8px;
+    margin-top: 1em;
+    padding: 10px;
     text-decoration: none;
     font-size: 24px;
     color: white;
@@ -248,6 +249,10 @@ footer {
     border: none;
 }
 
+.footer_logo_img {
+    width: 15em;
+}
+
 footer .footer-content {
     background-color: #BECFB8;
     padding: 0 3vw;
@@ -280,6 +285,10 @@ footer li {
 
 .logo-info {
     width: 30vw;
+}
+
+.logo-info .logo span {
+    max-width: 35em;
 }
 
 .about-me-info, .social-info, .maps-info {
@@ -489,6 +498,7 @@ textarea {
     background-color: #D5D1C4;
     border-radius: 0.5em;
     border: none;
+    font-family: 'Roboto regular';
 }
 
 /* Curved border */

@@ -18,7 +18,6 @@
   <body>
     <!-- HEADER -->
     <header>
-
       <!-- BURGER MENU -->
       <div class="mobile-menu-section mobile-only">
         <i
@@ -43,8 +42,10 @@
           <a href="#" onclick="scrollToAnchor('work-fields')"
             >Di cosa mi occupo</a
           >
-          <a href="#" onclick="scrollToAnchor('services')">Pacchetti</a>
-          <a href="#" onclick="scrollToAnchor('contacts')">Contatti</a>
+          <a href="#" onclick="scrollToAnchor('services')"
+            >Prestazioni più richieste</a
+          >
+          <a href="#" onclick="scrollToAnchor('contacts')">Contattami</a>
         </div>
       </div>
 
@@ -56,28 +57,36 @@
         <div class="rounded-square">
           <i class="fa-brands fa-instagram" style="color: #fff"></i>
         </div>
-        <a class="rounded-square" href="https://www.linkedin.com/in/arianna-vallet-1665b9220" target="_blank">
+        <a
+          class="rounded-square"
+          href="https://www.linkedin.com/in/arianna-vallet-1665b9220"
+          target="_blank"
+        >
           <i class="fa-brands fa-linkedin-in" style="color: #fff"></i>
         </a>
       </section>
 
       <section class="header-logo">
-        <img src="./images/logo.svg" alt="" />
+        <img src="./images/logo.svg" alt="Logo Arianna Vallet Logopedista" />
       </section>
 
       <nav>
         <ul>
           <li>
-            <a href="#about-me"> Riguardo me </a>
+            <a href="#" onclick="scrollToAnchor('about-me')"> Riguardo me </a>
           </li>
           <li>
-            <a href="#work-fields"> Di cosa mi occupo </a>
+            <a href="#" onclick="scrollToAnchor('work-fields')">
+              Di cosa mi occupo
+            </a>
           </li>
           <li>
-            <a href="#services"> Prestazioni più richieste </a>
+            <a href="#" onclick="scrollToAnchor('services')">
+              Prestazioni più richieste
+            </a>
           </li>
           <li>
-            <a href="#contacts"> Contatti </a>
+            <a href="#" onclick="scrollToAnchor('contacts')"> Contattami </a>
           </li>
         </ul>
       </nav>
@@ -94,7 +103,9 @@
             dell'apprendimento
           </p>
 
-          <button class="primary-btn"><span>Contattami</span></button>
+          <button class="primary-btn" onclick="scrollToAnchor('contacts')">
+            <span>Contattami</span>
+          </button>
         </section>
       </section>
 
@@ -230,7 +241,7 @@
 
       <!-- SERVICES (Pacchetti) -->
       <section class="animate-element services-section" id="services">
-        <h2> Prestazioni più richieste </h2>
+        <h2>Prestazioni più richieste</h2>
         <p>
           Lorem Ipsum è un testo segnaposto utilizzato nel settore della
           tipografia e della stampa. Lorem Ipsum è considerato il testo
@@ -249,7 +260,7 @@
               >Valutazione logopedica della deglutizione + stesura della
               relazione
             </span>
-            <button class="primary-btn">Scopri</button>
+            <!-- <button class="primary-btn">Scopri</button> -->
           </article>
 
           <article class="service animate-element">
@@ -264,7 +275,7 @@
               Valutazione logopedica della deglutizione + stesura della
               relazione
             </span>
-            <button class="primary-btn">Scopri</button>
+            <!-- <button class="primary-btn">Scopri</button> -->
           </article>
 
           <article class="service animate-element">
@@ -278,7 +289,7 @@
               >Tutte le sedute per la somministrazione dei test + stesura della
               relazione + colloquio restitutivo con la famiglia
             </span>
-            <button class="primary-btn">Scopri</button>
+            <!-- <button class="primary-btn">Scopri</button> -->
           </article>
         </section>
       </section>
@@ -286,7 +297,7 @@
       <!-- CONTACT ME -->
       <section class="animate-element contact-me-section" id="contacts">
         <h2>Contattami</h2>
-        <p>Compila il seguente form con i tuoi dati e sarai ricontattato</p>
+        <p>Compila il seguente form con i tuoi dati e sarai presto ricontattato</p>
 
         <form
           class="contact-me-form gap"
@@ -296,28 +307,28 @@
           <div class="row gap">
             <div class="text-input">
               <span>Nome</span>
-              <input type="text" name="nome" required />
+              <input type="text" name="nome" placeholder="Digita qui il tuo nome" required />
             </div>
 
             <div class="text-input">
               <span>Cognome</span>
-              <input type="text" name="cognome" required />
+              <input type="text" name="cognome" placeholder="Digita qui il tuo cognome" required />
             </div>
           </div>
           <div class="row gap">
             <div class="text-input">
               <span>Città</span>
-              <input type="text" name="citta" required />
+              <input type="text" name="citta" placeholder="Digita qui la tua città" required />
             </div>
             <div class="text-input">
               <span>Indirizzo</span>
-              <input type="text" name="indirizzo" required />
+              <input type="text" name="indirizzo" placeholder="Digita qui il tuo indirizzo" />
             </div>
           </div>
           <div class="row">
             <div class="text-input">
               <span>Di cosa avresti bisogno?</span>
-              <textarea name="richiesta" required></textarea>
+              <textarea name="richiesta" placeholder="Utilizza questo spazio per descrivere il tuo problema o le tue esigenze" required></textarea>
             </div>
           </div>
 
@@ -343,12 +354,15 @@
       <section class="footer-content">
         <section class="logo-info">
           <section class="logo">
-            <i class="fa-solid fa-leaf fa-3x" style="color: #305852"></i>
-            <h1>DOTT.SA ARIANNA VALLET</h1>
+            <img
+              src="./images/logo.svg"
+              alt="Logo Arianna Vallet Logopedista"
+              class="footer_logo_img"
+            />
 
             <span style="text-align: center">
-              Lorem Ipsum è un testo segnaposto utilizzato nel settore della
-              tipografia.
+              Terapia su misura per ogni esigenza per bambini, adulti e
+              trattamento di disturbi dell'apprendimento.
             </span>
           </section>
         </section>

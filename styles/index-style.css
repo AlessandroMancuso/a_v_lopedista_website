@@ -221,8 +221,8 @@ article.service button {
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 
     section.call-to-action-section {
-        width: 35vw;
-        margin-left: 15vw;
+        width: 40vw;
+        margin-left: 10vw;
     }
 
     section.call-to-action-section button {
