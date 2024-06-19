@@ -31,7 +31,7 @@
   .modal-content {
     background-color: #EEEDE7;
     margin: 5% auto;
-    padding: 2em;
+    padding: 1.5em;
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
@@ -54,6 +54,6 @@
   }
 
   .modal-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5em;
   }
