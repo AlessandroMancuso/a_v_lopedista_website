@@ -119,7 +119,7 @@ article.work-field p {
     line-height: 1.5em;
 }
 
-article.work-field .work-field-icon {
+.work-field-icon {
     width: 4em;
     height: 4em;
     border-radius: 50%;
@@ -130,7 +130,7 @@ article.work-field .work-field-icon {
     align-items: center;
 }
 
-article.work-field .work-field-icon img {
+.work-field-icon img {
     width: 2em;
     height: auto;
 }

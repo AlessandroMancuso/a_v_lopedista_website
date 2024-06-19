@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./styles/common-styles.css" class="rel" />
     <link rel="stylesheet" href="./styles/index-style.css" class="rel" />
+    <link rel="stylesheet" href="./styles/modal-style.css" class="rel" />
 
     <script
       src="https://kit.fontawesome.com/a332e3b351.js"
@@ -14,6 +15,7 @@
     ></script>
     <script src="./scripts/common-scripts.js" defer></script>
     <script src="./scripts/banner.js" defer></script>
+    <script src="./scripts/modal.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -31,7 +33,7 @@
       <div id="myNav" class="overlay mobile-only">
         <!-- Button to close the overlay navigation -->
         <i
-          class="fa-solid fa-x fa-2xl closebtn"
+          class="fa-solid fa-xmark fa-2xl closebtn"
           style="color: #fff"
           onclick="closeNav()"
         ></i>
@@ -143,7 +145,7 @@
               <div class="d-flex">
                 <h3>LINGUAGGIO e COMUNICAZIONE</h3>
 
-                <div class="icon-container">
+                <div class="icon-container dekstop-only">
                   <i
                     class="fa-solid fa-circle-question fa-lg"
                     style="color: #305852"
@@ -162,6 +164,8 @@
                 Ritardo/disturbo specifico o aspecifico del linguaggio,
                 disprassia verbale, disfluenze, afasia, disartria
               </p>
+
+              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('linguaggio')">Scopri di più</button>
             </article>
 
             <article class="work-field animate-element">
@@ -171,7 +175,7 @@
               <div class="d-flex">
                 <h3>APPRENDIMENTO e FUNZIONI ESECUTIVE</h3>
 
-                <div class="icon-container">
+                <div class="icon-container dekstop-only">
                   <i
                     class="fa-solid fa-circle-question fa-lg"
                     style="color: #305852"
@@ -195,6 +199,8 @@
                 Difficoltà scolastiche, disturbi specifici (DSA) e non
                 dell'apprendimento, disturbi dell'attenzione e della memoria
               </p>
+
+              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('apprendimento')">Scopri di più</button>
             </article>
 
             <article class="work-field animate-element">
@@ -204,7 +210,7 @@
               <div class="d-flex">
                 <h3>DISTURBI DELLO SPETTRO AUTISTICO e CAA</h3>
 
-                <div class="icon-container">
+                <div class="icon-container dekstop-only">
                   <i
                     class="fa-solid fa-circle-question fa-lg"
                     style="color: #305852"
@@ -222,6 +228,8 @@
                 spettro autistico possono coinvolgere a 360° la persona e la sua
                 famiglia
               </p>
+
+              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('disturbiCAA')">Scopri di più</button>
             </article>
 
             <article class="work-field animate-element">
@@ -232,7 +240,7 @@
               <div class="d-flex">
                 <h3>DEGLUTIZIONE e FUNZIONI ORALI</h3>
 
-                <div class="icon-container">
+                <div class="icon-container dekstop-only">
                   <i
                     class="fa-solid fa-circle-question fa-lg"
                     style="color: #305852"
@@ -246,6 +254,8 @@
                 </div>
               </div>
               <p>Deglutizione atipica, disfagia</p>
+
+              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('deglutizione')">Scopri di più</button>
             </article>
 
             <article class="work-field animate-element">
@@ -256,7 +266,7 @@
               <div class="d-flex">
                 <h3>VOCE</h3>
 
-                <div class="icon-container">
+                <div class="icon-container dekstop-only">
                   <i
                     class="fa-solid fa-circle-question fa-lg"
                     style="color: #305852"
@@ -270,6 +280,8 @@
                 </div>
               </div>
               <p>Disfonie</p>
+
+              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('voce')">Scopri di più</button>
             </article>
 
             <article class="work-field animate-element">
@@ -281,8 +293,9 @@
                 Lo spazio ideale per le persone o famiglie che necessitano di
                 informazioni o chiarimenti, di condividere dubbi o
                 preoccupazioni circa una situazione di interesse logopedico e
-                ricevere le primissime indicazioni dello specialista
+                ricevere le primissime indicazioni dello specialisSta
               </p>
+
             </article>
           </section>
         </section>
@@ -328,7 +341,8 @@
             <img src="./images/personalized.png" alt="PACCHETTO SU MISURA" />
             <h3>TERAPIA DOMICILIARE</h3>
             <span class="subtitle">
-              Per tutte le persone che non possono raggiungere lo studio è possibile attivare un intervento a domicilio
+              Per tutte le persone che non possono raggiungere lo studio è
+              possibile attivare un intervento a domicilio
             </span>
             <span class="details"
               >Tutte le sedute per la somministrazione dei test + stesura della
@@ -492,6 +506,26 @@
       </section>
     </footer>
 
+    <!-- MODAL -->
+    <div id="tooltipModal" class="modal">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="work-field-icon">
+            <img id="modalImage" src="" alt="Tooltip Image" >
+          </div>
+
+          <i class="fa-solid fa-xmark fa-2xl" onclick="closeModal()"></i>
+        </div>
+
+        <div class="modal-title">
+          <h3 id="modalTitle"></h3>
+        </div>
+
+        <p id="modalText" class="modal-text" ></p>
+      </div>
+    </div>
+
     <!-- BANNER GDPR -->
     <div id="banner-privacy">
       <p>
@@ -505,5 +539,6 @@
         <button class="tertiary-btn reject">Rifiuta</button>
       </div>
     </div>
+
   </body>
 </html>
