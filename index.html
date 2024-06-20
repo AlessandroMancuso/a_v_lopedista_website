@@ -16,6 +16,40 @@
     <script src="./scripts/common-scripts.js" defer></script>
     <script src="./scripts/banner.js" defer></script>
     <script src="./scripts/modal.js" defer></script>
+
+    <!-- CONTACT FORM SCRIPTS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("eP-OsQstIpVyMtd-S");
+      })();
+    </script>
+
+    <script>
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            this.contact_number.value = (Math.random() * 100000) | 0;
+
+            console.log("Arriva qui");
+
+            emailjs.sendForm("service_l561j2h", "template_czmaq0n", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <!-- HEADER -->
@@ -165,7 +199,12 @@
                 disprassia verbale, disfluenze, afasia, disartria
               </p>
 
-              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('linguaggio')">Scopri di più</button>
+              <button
+                class="primary-btn modal-open-btn mobile-only"
+                onclick="openModal('linguaggio')"
+              >
+                Scopri di più
+              </button>
             </article>
 
             <article class="work-field animate-element">
@@ -200,7 +239,12 @@
                 dell'apprendimento, disturbi dell'attenzione e della memoria
               </p>
 
-              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('apprendimento')">Scopri di più</button>
+              <button
+                class="primary-btn modal-open-btn mobile-only"
+                onclick="openModal('apprendimento')"
+              >
+                Scopri di più
+              </button>
             </article>
 
             <article class="work-field animate-element">
@@ -229,7 +273,12 @@
                 famiglia
               </p>
 
-              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('disturbiCAA')">Scopri di più</button>
+              <button
+                class="primary-btn modal-open-btn mobile-only"
+                onclick="openModal('disturbiCAA')"
+              >
+                Scopri di più
+              </button>
             </article>
 
             <article class="work-field animate-element">
@@ -255,7 +304,12 @@
               </div>
               <p>Deglutizione atipica, disfagia</p>
 
-              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('deglutizione')">Scopri di più</button>
+              <button
+                class="primary-btn modal-open-btn mobile-only"
+                onclick="openModal('deglutizione')"
+              >
+                Scopri di più
+              </button>
             </article>
 
             <article class="work-field animate-element">
@@ -281,7 +335,12 @@
               </div>
               <p>Disfonie</p>
 
-              <button class="primary-btn modal-open-btn mobile-only" onclick="openModal('voce')">Scopri di più</button>
+              <button
+                class="primary-btn modal-open-btn mobile-only"
+                onclick="openModal('voce')"
+              >
+                Scopri di più
+              </button>
             </article>
 
             <article class="work-field animate-element">
@@ -295,7 +354,6 @@
                 preoccupazioni circa una situazione di interesse logopedico e
                 ricevere le primissime indicazioni dello specialisSta
               </p>
-
             </article>
           </section>
         </section>
@@ -360,11 +418,9 @@
           Compila il seguente form con i tuoi dati e sarai presto ricontattato
         </p>
 
-        <form
-          class="contact-me-form gap"
-          action="./scripts/send_email.php"
-          method="post"
-        >
+        <form class="contact-me-form gap" id="contact-form">
+          <input type="hidden" name="contact_number" />
+
           <div class="row gap">
             <div class="text-input">
               <span>Nome</span>
@@ -388,20 +444,15 @@
           </div>
           <div class="row gap">
             <div class="text-input">
-              <span>Città</span>
-              <input
-                type="text"
-                name="citta"
-                placeholder="Digita qui la tua città"
-                required
-              />
+              <span>Recapito telefonico</span>
+              <input type="tel" name="phone" required />
             </div>
             <div class="text-input">
-              <span>Indirizzo</span>
+              <span>Email</span>
               <input
                 type="text"
-                name="indirizzo"
-                placeholder="Digita qui il tuo indirizzo"
+                name="email"
+                placeholder="Digita qui la tua email"
               />
             </div>
           </div>
@@ -409,7 +460,7 @@
             <div class="text-input">
               <span>Di cosa avresti bisogno?</span>
               <textarea
-                name="richiesta"
+                name="messaggio"
                 placeholder="Utilizza questo spazio per descrivere il tuo problema o le tue esigenze"
                 required
               ></textarea>
@@ -509,10 +560,9 @@
     <!-- MODAL -->
     <div id="tooltipModal" class="modal">
       <div class="modal-content">
-
         <div class="modal-header">
           <div class="work-field-icon">
-            <img id="modalImage" src="" alt="Tooltip Image" >
+            <img id="modalImage" src="" alt="Tooltip Image" />
           </div>
 
           <i class="fa-solid fa-xmark fa-2xl" onclick="closeModal()"></i>
@@ -522,7 +572,7 @@
           <h3 id="modalTitle"></h3>
         </div>
 
-        <p id="modalText" class="modal-text" ></p>
+        <p id="modalText" class="modal-text"></p>
       </div>
     </div>
 
@@ -539,6 +589,5 @@
         <button class="tertiary-btn reject">Rifiuta</button>
       </div>
     </div>
-
   </body>
 </html>

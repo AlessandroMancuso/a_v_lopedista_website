@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // GESTIONE MENU MOBILE
 
-function openNav() {
+openNav = () => {
   let overlay = document.getElementById("myNav");
   overlay.style.animation = "expand 0.5s forwards";
 }
 
-function closeNav() {
+closeNav = () => {
   let overlay = document.getElementById("myNav");
   overlay.style.animation = "contract 0.5s forwards";
 
@@ -42,12 +42,15 @@ function closeNav() {
   }, 500);
 }
 
-function scrollToAnchor(anchor) {
-  closeNav();
-
+scrollToAnchor = (anchor) => {
   document.getElementById(anchor).scrollIntoView({
     behavior: "smooth",
   });
+}
+
+navigateFromMobileMenu = () => {
+  closeNav();
+  scrollToAnchor();
 }
 
 // TOOLTIP

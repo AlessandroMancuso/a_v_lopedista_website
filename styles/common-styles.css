@@ -480,7 +480,7 @@ section.copyright span {
     font-size: 12px;
 }
 
-input[type=text] {
+input[type=text], input[type=tel] {
     width: 25em;
     padding: 1em;
     background-color: #D5D1C4;
