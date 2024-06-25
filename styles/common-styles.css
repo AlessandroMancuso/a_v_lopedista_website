@@ -519,6 +519,34 @@ textarea {
     border: none;
 }
 
+/* Back to top */
+
+.back-to-top-btn {
+    display: none;;
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    z-index: 999;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: #D2B1A7;
+    border: none;
+
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+    background-color: #e0cac3;
+}
+
+.back-to-top-btn img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
 /* RESPONSIVENESS */
 
 .mobile-only {

@@ -24,7 +24,7 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("eP-OsQstIpVyMtd-S");
+        emailjs.init("0Fu8k-0KGrH_fNWop");
       })();
     </script>
 
@@ -37,9 +37,7 @@
 
             this.contact_number.value = (Math.random() * 100000) | 0;
 
-            console.log("Arriva qui");
-
-            emailjs.sendForm("service_l561j2h", "template_czmaq0n", this).then(
+            emailjs.sendForm("service_pdjm21d", "template_jk209qn", this).then(
               function () {
                 console.log("SUCCESS!");
               },
@@ -81,7 +79,9 @@
           <a href="#" onclick="navigateFromMobileMenu('services')"
             >Prestazioni più richieste</a
           >
-          <a href="#" onclick="navigateFromMobileMenu('contacts')">Contattami</a>
+          <a href="#" onclick="navigateFromMobileMenu('contacts')"
+            >Contattami</a
+          >
         </div>
       </div>
 
@@ -547,6 +547,11 @@
         >
       </section>
     </footer>
+
+    <!-- BACK TO TOP BTN -->
+    <button class="back-to-top-btn" id="back-to-top" onclick="topFunction()">
+      <img src="./images/up-chevron.png" alt="Back to top" />
+    </button>
 
     <!-- MODAL -->
     <div id="tooltipModal" class="modal">
