@@ -3,7 +3,7 @@
 
 section.hero {
     height: 370px;
-    background-image: url("../images/bg-image_WILL5.png");
+    background-image: url("../images/home-bg.png");
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -291,7 +291,7 @@ article.service button {
 
     section.hero {
         height: 600px;
-        background-image: url('../images/bg_SM.png');
+        background-image: url('../images/home_bg_sm.png');
         justify-content: center;
     }
 
