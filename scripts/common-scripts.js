@@ -48,9 +48,9 @@ scrollToAnchor = (anchor) => {
   });
 }
 
-navigateFromMobileMenu = () => {
+navigateFromMobileMenu = (anchor) => {
   closeNav();
-  scrollToAnchor();
+  scrollToAnchor(anchor);
 }
 
 // TOOLTIP
