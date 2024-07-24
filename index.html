@@ -44,10 +44,10 @@
 
             emailjs.sendForm("service_pdjm21d", "template_jk209qn", this).then(
               function () {
-                openModal('mail-success');
+                openModal("mail-success");
               },
               function (error) {
-                openModal('mail-failed');
+                openModal("mail-failed");
               }
             );
           });
@@ -406,74 +406,77 @@
       </section>
 
       <!-- CONTACT ME -->
-      <section class="animate-element contact-me-section" id="contacts">
+      <section class="contact-me-section" id="contacts">
         <h2 class="animate-element">Contattami</h2>
-        <p>
-          Compila il seguente form con i tuoi dati e sarai presto ricontattato
-        </p>
 
-        <form class="contact-me-form gap" id="contact-form">
-          <input type="hidden" name="contact_number" />
+        <div class="animate-element">
+          <p>
+            Compila il seguente form con i tuoi dati e sarai presto ricontattato
+          </p>
 
-          <div class="row gap">
-            <div class="text-input">
-              <span>Nome</span>
-              <input
-                type="text"
-                name="nome"
-                placeholder="Digita qui il tuo nome"
-                required
-              />
+          <form class="contact-me-form gap" id="contact-form">
+            <input type="hidden" name="contact_number" />
+
+            <div class="row gap">
+              <div class="text-input">
+                <span>Nome</span>
+                <input
+                  type="text"
+                  name="nome"
+                  placeholder="Digita qui il tuo nome"
+                  required
+                />
+              </div>
+
+              <div class="text-input">
+                <span>Cognome</span>
+                <input
+                  type="text"
+                  name="cognome"
+                  placeholder="Digita qui il tuo cognome"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row gap">
+              <div class="text-input">
+                <span>Recapito telefonico</span>
+                <input type="tel" name="phone" required />
+              </div>
+              <div class="text-input">
+                <span>Email</span>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Digita qui la tua email"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="text-input">
+                <span>Di cosa avresti bisogno?</span>
+                <textarea
+                  name="messaggio"
+                  placeholder="Utilizza questo spazio per descrivere il tuo problema o le tue esigenze"
+                  required
+                ></textarea>
+              </div>
             </div>
 
-            <div class="text-input">
-              <span>Cognome</span>
-              <input
-                type="text"
-                name="cognome"
-                placeholder="Digita qui il tuo cognome"
-                required
-              />
+            <div class="row">
+              <input type="checkbox" id="consenso" name="consenso" required />
+              <label for="consenso" style="font-size: 14px">
+                Accetto la <a href="#" class="href">politica sulla privacy</a>
+              </label>
             </div>
-          </div>
-          <div class="row gap">
-            <div class="text-input">
-              <span>Recapito telefonico</span>
-              <input type="tel" name="phone" required />
-            </div>
-            <div class="text-input">
-              <span>Email</span>
-              <input
-                type="text"
-                name="email"
-                placeholder="Digita qui la tua email"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="text-input">
-              <span>Di cosa avresti bisogno?</span>
-              <textarea
-                name="messaggio"
-                placeholder="Utilizza questo spazio per descrivere il tuo problema o le tue esigenze"
-                required
-              ></textarea>
-            </div>
-          </div>
 
-          <div class="row">
-            <input type="checkbox" id="consenso" name="consenso" required />
-            <label for="consenso" style="font-size: 14px">
-              Accetto la <a href="#" class="href">politica sulla privacy</a>
-            </label>
-          </div>
-
-          <div class="row contact-btn-row gap">
-            <button class="primary-btn mobile-big-btn" type="submit">
-              Invia
-            </button>
-          </div>
-        </form>
+            <div class="row contact-btn-row gap">
+              <button class="primary-btn mobile-big-btn" type="submit">
+                Invia
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 

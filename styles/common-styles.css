@@ -161,7 +161,7 @@ nav.desktop-nav a {
     height: 0;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     right: 0;
     background: linear-gradient(to bottom, #305852f9, #bedfb8f9); 
