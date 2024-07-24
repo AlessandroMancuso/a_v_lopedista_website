@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Logopedista Arianna Vallet</title>
+    <meta
+      name="description"
+      content="Logopedista ad Aosta: terapia del linguaggio per bambini, adulti e anziani. Contattami per fissare una consulenza."
+    />
 
     <link rel="stylesheet" href="./styles/common-styles.css" class="rel" />
     <link rel="stylesheet" href="./styles/index-style.css" class="rel" />
@@ -39,10 +44,10 @@
 
             emailjs.sendForm("service_pdjm21d", "template_jk209qn", this).then(
               function () {
-                console.log("SUCCESS!");
+                openModal('mail-success');
               },
               function (error) {
-                console.log("FAILED...", error);
+                openModal('mail-failed');
               }
             );
           });
@@ -52,51 +57,47 @@
   <body>
     <!-- HEADER -->
     <header>
-      <!-- BURGER MENU -->
+      <!-- Burger menu icon -->
       <div class="mobile-menu-section mobile-only">
         <i
           class="fa-solid fa-bars fa-2xl burger-menu"
           style="color: #fff"
           onclick="openNav()"
+          aria-label="Apri il menu di navigazione"
         ></i>
       </div>
 
-      <!-- MOBILE MENU -->
-      <div id="myNav" class="overlay mobile-only">
-        <!-- Button to close the overlay navigation -->
+      <!-- Mobile menu -->
+      <div id="myNav" class="overlay mobile-only" aria-hidden="true">
         <i
           class="fa-solid fa-xmark fa-2xl closebtn"
           style="color: #fff"
           onclick="closeNav()"
+          aria-label="Chiudi il menu di navigazione"
         ></i>
 
         <!-- Overlay content -->
-        <div class="overlay-content">
-          <a href="#" onclick="navigateFromMobileMenu('about-me')">Chi sono</a>
-          <a href="#" onclick="navigateFromMobileMenu('work-fields')"
-            >Di cosa mi occupo</a
-          >
-          <a href="#" onclick="navigateFromMobileMenu('services')"
-            >Prestazioni più richieste</a
-          >
-          <a href="#" onclick="navigateFromMobileMenu('contacts')"
-            >Contattami</a
-          >
-        </div>
+        <nav class="overlay-content">
+          <a href="#about-me" onclick="closeNav()">Chi sono</a>
+          <a href="#work-fields" onclick="closeNav()">Di cosa mi occupo</a>
+          <a href="#services" onclick="closeNav()">Prestazioni più richieste</a>
+          <a href="#contacts" onclick="closeNav()">Contattami</a>
+        </nav>
       </div>
 
       <section class="header-contacts dekstop-only">
         <span class="header-phone-contact">
           <i class="fas fa-phone" style="color: #305852"></i>
-          +39 3281339667
+          <a href="tel:+393281339667" style="color: #305852">+39 3281339667</a>
         </span>
-        <div class="rounded-square">
-          <i class="fa-brands fa-instagram" style="color: #fff"></i>
-        </div>
+        <!-- <div class="rounded-square">
+          <i class="fa-brands fa-instagram" style="color: #fff" ></i>
+        </div> -->
         <a
           class="rounded-square"
           href="https://www.linkedin.com/in/arianna-vallet-1665b9220"
           target="_blank"
+          title="linkedIn"
         >
           <i class="fa-brands fa-linkedin-in" style="color: #fff"></i>
         </a>
@@ -106,23 +107,19 @@
         <img src="./images/logo.svg" alt="Logo Arianna Vallet Logopedista" />
       </section>
 
-      <nav>
+      <nav class="desktop-nav">
         <ul>
           <li>
-            <a href="#" onclick="scrollToAnchor('about-me')"> Riguardo me </a>
+            <a href="#about-me"> Riguardo me </a>
           </li>
           <li>
-            <a href="#" onclick="scrollToAnchor('work-fields')">
-              Di cosa mi occupo
-            </a>
+            <a href="#work-fields"> Di cosa mi occupo </a>
           </li>
           <li>
-            <a href="#" onclick="scrollToAnchor('services')">
-              Prestazioni più richieste
-            </a>
+            <a href="#services"> Prestazioni più richieste </a>
           </li>
           <li>
-            <a href="#" onclick="scrollToAnchor('contacts')"> Contattami </a>
+            <a href="#contacts"> Contattami </a>
           </li>
         </ul>
       </nav>
@@ -131,15 +128,13 @@
     <main>
       <!-- HERO -->
       <section class="hero">
-        <section class="call-to-action-section">
+        <div class="call-to-action-section">
           <h1>Un mondo di parole per volersi bene</h1>
 
-          <p>Terapia logopedica per bambini, adulti e anziani</p>
+          <p>Terapia logopedica per bambini, adulti e anziani ad Aosta</p>
 
-          <button class="primary-btn" onclick="scrollToAnchor('contacts')">
-            <span>Contattami</span>
-          </button>
-        </section>
+          <a href="#contacts" class="primary-btn">Contattami</a>
+        </div>
       </section>
 
       <!-- ABOUT ME -->
@@ -166,13 +161,13 @@
 
       <!-- DI COSA MI OCCUPO -->
       <section class="work-fields-section" id="work-fields">
-        <section class="curved-top-border"></section>
+        <div class="curved-top-border"></div>
 
         <section class="work-fields-container">
-          <h2>Di cosa mi occupo</h2>
+          <h2 class="animate-element">Di cosa mi occupo</h2>
 
           <section class="animate-element work-fields">
-            <article class="work-field animate-element">
+            <article class="work-field animate-element z-10">
               <div class="work-field-icon">
                 <img src="./images/chat.png" alt="" />
               </div>
@@ -207,7 +202,7 @@
               </button>
             </article>
 
-            <article class="work-field animate-element">
+            <article class="work-field animate-element z-10">
               <div class="work-field-icon">
                 <img src="./images/idea.png" alt="" />
               </div>
@@ -247,7 +242,7 @@
               </button>
             </article>
 
-            <article class="work-field animate-element">
+            <article class="work-field animate-elementz-10">
               <div class="work-field-icon">
                 <img src="./images/puzzle.png" alt="" />
               </div>
@@ -358,7 +353,7 @@
           </section>
         </section>
 
-        <section class="curved-bottom-border"></section>
+        <div class="curved-bottom-border"></div>
       </section>
 
       <!-- SERVICES (Pacchetti) -->
@@ -367,7 +362,7 @@
 
         <section class="services-container">
           <article class="service animate-element">
-            <img src="./images/dsa.png" alt="PACCHETTO DSA" />
+            <img src="./images/dsa.png" alt="ICONA PACCHETTO DSA" />
             <h3>PACCHETTO DSA</h3>
             <span class="subtitle">
               Valutazione o rivalutazione logopedica degli apprendimenti
@@ -381,7 +376,7 @@
           </article>
 
           <article class="service animate-element">
-            <img src="./images/throat.png" alt="PACCHETTO DISFAGIA" />
+            <img src="./images/throat.png" alt="ICONA PACCHETTO DISFAGIA" />
             <h3>PACCHETTO DISFAGIA</h3>
             <span class="subtitle">
               Valutazione della dinamica deglutitoria con le diverse consistenze
@@ -396,7 +391,10 @@
           </article>
 
           <article class="service animate-element">
-            <img src="./images/personalized.png" alt="PACCHETTO SU MISURA" />
+            <img
+              src="./images/personalized.png"
+              alt="ICONA TERAPIA DOMICILIARE"
+            />
             <h3>TERAPIA DOMICILIARE</h3>
             <span class="subtitle">
               Per tutte le persone che non possono raggiungere lo studio è
@@ -409,7 +407,7 @@
 
       <!-- CONTACT ME -->
       <section class="animate-element contact-me-section" id="contacts">
-        <h2>Contattami</h2>
+        <h2 class="animate-element">Contattami</h2>
         <p>
           Compila il seguente form con i tuoi dati e sarai presto ricontattato
         </p>
@@ -474,7 +472,6 @@
             <button class="primary-btn mobile-big-btn" type="submit">
               Invia
             </button>
-            <button class="tertiary-btn mobile-big-btn">Pulisci</button>
           </div>
         </form>
       </section>
@@ -542,8 +539,8 @@
 
       <section class="copyright">
         <span
-          >© Copyright 2024. <strong>Alessandro Mancuso</strong> Tutti i diritti
-          riservati.</span
+          >© Copyright 2024. <strong>Logopedista Arianna Vallet</strong> Tutti i
+          diritti riservati.</span
         >
       </section>
     </footer>

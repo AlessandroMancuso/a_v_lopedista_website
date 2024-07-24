@@ -38,11 +38,13 @@ section.hero {
     font-weight: 400;
 }
 
-.call-to-action-section button {
+.call-to-action-section a {
     width: 10vw;
     font-size: 20px;
     padding: 0.5em 1em;
     border-radius: 1em;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* ABOUT ME SECTION */
@@ -220,12 +222,12 @@ article.service button {
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 
-    section.call-to-action-section {
+    .call-to-action-section {
         width: 40vw;
         margin-left: 10vw;
     }
 
-    section.call-to-action-section button {
+    .call-to-action-section a {
         width: 20vw;
     }
 
@@ -310,7 +312,7 @@ article.service button {
         font-size: 18px;
     }
 
-    .call-to-action-section button {
+    .call-to-action-section a {
         width: 40vw;
     }
 

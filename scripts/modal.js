@@ -29,6 +29,18 @@ const tooltips = [
     imageUrl: "./images/online-chat.png",
     text: "Per cause organiche o funzionali è possibile che la persona manifesti difficoltà nell'emissione della voce: raucedine, afonia, instabilità della voce, affaticabilità nel parlare o nel cantare",
   },
+  {
+    id: "mail-success",
+    title: "MESSAGGIO INVIATO",
+    imageUrl: "./images/mail-success.png",
+    text: "Grazie di avermi contattato! Il tuo messaggio è stato inviato correttamente e verrai ricontattato in pochi giorni.",
+  },
+  {
+    id: "mail-failed",
+    title: "INVIO NON RIUSCITO",
+    imageUrl: "./images/mail-fail.png",
+    text: "Per qualche ragione l'invio del messaggio non è andato a buon fine, attendi qualche minuto e poi riprova, se il problema persiste puoi contattarmi tramite la mia mail ariannavallet@gmail.com.",
+  },
 ];
 
 // Get the modal
@@ -47,11 +59,11 @@ openModal = (tooltipId) => {
   document.getElementById("modalTitle").innerText = tooltipTitle;
   document.getElementById("modalText").innerText = tooltipText;
   modal.style.display = "flex";
-}
+};
 
 closeModal = () => {
-    modal.style.display = "none";
-}
+  modal.style.display = "none";
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {

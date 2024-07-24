@@ -1,8 +1,10 @@
+
 // GESTIONE BANNER GDPR
 setTimeout(function () {
   document.getElementById("banner-privacy").classList.add("show");
 }, 1000);
 
+// ANIMATIONS
 document.addEventListener("DOMContentLoaded", function () {
   const boxes = document.querySelectorAll(".animate-element");
 
@@ -42,16 +44,20 @@ closeNav = () => {
   }, 500);
 }
 
-scrollToAnchor = (anchor) => {
-  document.getElementById(anchor).scrollIntoView({
-    behavior: "smooth",
-  });
-}
+// SMOOTH SCROLL BEHAVIOur
 
-navigateFromMobileMenu = (anchor) => {
-  closeNav();
-  scrollToAnchor(anchor);
-}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substr(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 
 // TOOLTIP
 document.addEventListener("DOMContentLoaded", () => {
@@ -68,3 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltip.style.opacity = '0';
   });
 });
+
+// BACK TO TOP
+topFunction = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
