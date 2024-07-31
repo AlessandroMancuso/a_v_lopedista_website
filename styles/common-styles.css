@@ -11,11 +11,6 @@
     src: url("../fonts/Roboto/Roboto-Bold.ttf");
 }
 
-@font-face {
-    font-family: 'Copperplate gothic';
-    src: url("../fonts/Copperplate-gothic/Copperplate-Gothic-Std-29-AB.ttf");
-}
-
 h1 {
     color: #1C2823;
     font-size: 24px;
@@ -306,12 +301,18 @@ footer li {
 section.copyright {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 3em;
     background-color: #BECFB8;
     padding: 1em 0;
 }
 
 section.copyright span {
     font-size: 12px;
+}
+
+section.copyright ul {
+    display: flex;
 }
 
 /* LOGO */
@@ -326,7 +327,6 @@ section.copyright span {
 
 .logo h1 {
     color: #1C2823;
-    font-family: 'Copperplate gothic', sans-serif;
     font-size: 18px;
     font-weight: 100;
     letter-spacing: 1px;
