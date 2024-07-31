@@ -156,7 +156,7 @@ nav.desktop-nav a {
     height: 0;
     width: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 25;
     top: 0;
     right: 0;
     background: linear-gradient(to bottom, #305852f9, #bedfb8f9); 
@@ -311,9 +311,23 @@ section.copyright span {
     font-size: 12px;
 }
 
-section.copyright ul {
+.privacy-links-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
 }
+
+.privacy-links {
+    display: flex;
+    gap: 1em;
+    padding-left: 0;
+}
+
+.privacy-links li {
+    list-style-type: none;
+}
+
 
 /* LOGO */
 
@@ -406,7 +420,7 @@ section.copyright ul {
     position: fixed;
     right: 2em;
     bottom: 2em;
-    z-index: 999;
+    z-index: 15;
     width: 3.5em;
     height: 3.5em;
     border-radius: 50%;
@@ -416,6 +430,8 @@ section.copyright ul {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    display: none;
 }
 
 .back-to-top-btn:hover {
@@ -647,6 +663,12 @@ textarea {
 
     .row {
         justify-content: center;
+    }
+
+    section.copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
     }
 
 }

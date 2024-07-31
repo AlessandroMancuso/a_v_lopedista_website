@@ -84,7 +84,7 @@ section.about-me-section p {
 
 section.work-fields-section {
     position: relative;
-    z-index: 9;
+    z-index: 15;
 
     margin-top: -15px;
 }

@@ -1,8 +1,8 @@
 
 // GESTIONE BANNER GDPR
-setTimeout(function () {
-  document.getElementById("banner-privacy").classList.add("show");
-}, 1000);
+// setTimeout(function () {
+//   document.getElementById("banner-privacy").classList.add("show");
+// }, 1000);
 
 // ANIMATIONS
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // GESTIONE MENU MOBILE
-
 openNav = () => {
   let overlay = document.getElementById("myNav");
   overlay.style.animation = "expand 0.5s forwards";
@@ -45,7 +44,6 @@ closeNav = () => {
 }
 
 // SMOOTH SCROLL BEHAVIOur
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -76,6 +74,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // BACK TO TOP
+const btnScrollToTop = document.querySelector(".back-to-top-btn");
+
+// scroll to top of page when button clicked
+btnScrollToTop.addEventListener("click", e => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
+});
+
+// toggle 'scroll to top' based on scroll position
+window.addEventListener('scroll', e => {
+  btnScrollToTop.style.display = window.scrollY > 50 ? 'block' : 'none';
+});
+
 topFunction = () => {
   window.scrollTo({
     top: 0,
